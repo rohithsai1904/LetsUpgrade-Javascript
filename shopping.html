@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+		  background-color: black;
+		color: yellow;
+      }
+
+      .header {
+        height: 70px;
+        width: 100%;
+        background-color: black;
+        line-height: 70px;
+      }
+
+      h1 {
+        margin-left: 5%;
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+		font-family : impact;
+		color : yellow;
+      }
+	  input
+	  {border : 2px solid yellow;
+	  padding : 5px;
+	  outline:none;
+	  margin: 5px;
+	  border-radius:6px;}
+
+      .search {
+        height: 70px;
+        width: 60%;
+        /* background-color: red; */
+        display: inline-block;
+      }
+
+      .search input {
+        height: 40px;
+        width: 100%;
+        text-indent: 20px;
+        border-radius: 5px;
+        border: 1px solid yellow;
+        outline: none;
+		color:yellow;
+		font-family: impact;
+      }
+
+      .products {
+        width: 100%;
+        height: auto;
+        /* background-color: gray; */
+		background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRMTtt2Qim2IUzRQiCzJ41YdRObEJIIymgV3w&usqp=CAU');
+      }
+
+      .productwrapper {
+        height: auto;
+        width: 80%;
+        /* background-color: green; */
+        margin-left: 10%;
+        margin-bottom: 50px;
+      }
+
+      .product {
+        height: auto;
+        width: 25%; 
+        display: inline-block;
+        margin-top: 25px;
+        margin-left: 6.25%;
+        border: 1px solid lightgray;
+		background-image: intial;		
+		
+      }
+
+      .prodimg {
+        height: 300px;
+        width: 100%;
+        /* background-color: yellow; */
+        overflow: hidden;
+      }
+
+      .product h3,
+      .product p {
+        padding: 5px;
+        padding-left: 10px;
+      }
+
+      .product p {
+        color: gray;
+      }
+      button {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>BATSHOPPER365</h1>
+      <div class="search">
+        <input
+          type="search"
+          onkeyup="search(this.value)"
+          placeholder="Search For Products"
+        />
+      </div>
+    </div>
+    <center>
+    <div id="filter" style="margin : 15px;">
+	    <form>
+		<h3> Enter the min Price<input type="number" id="min" />
+		  Enter the max Price<input type="number" id="max"/></h3>
+		<button style="color:yellow; font-family:impact;  width:7%; margin:10px; border: 2px solid yellow; " onclick="filterprice()">FILTER</button>
+		</form>
+	</center>	
+	</div> 
+    <div class="products">
+      <div class="productwrapper" id="productwrapper"></div>
+    </div>
+
+    
+<center> <a href="cart.html" > <button style="color:yellow; font-family:gillsans; font-size:150%; width:50%;  border: 2px solid yellow; ">CLICK HERE TO VIEW ITEMS IN CART</button></a> </center>
+    <script src="shopping.js"></script>
+  </body>
+</html>
